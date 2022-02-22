@@ -108,7 +108,7 @@ Uploading Filesystem Images
 ---------------------------
 The onboard flash filesystem for the Pico, LittleFS, lets you upload a filesystem image from the sketch directory for your sketch to use.  Download the needed plugin from
 
-* https://github.com/taylor-an/arduino-pico-littlefs-plugin/releases
+* https://github.com/earlephilhower/arduino-pico-littlefs-plugin/releases
 
 To install, follow the directions in 
 

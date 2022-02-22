@@ -183,7 +183,7 @@ directive to do so. Simply specify that the framework package
 .. code:: ini
 
     platform_packages =
-       framework-arduinopico@https://github.com/taylor-an/arduino-pico.git#taylor-20220222
+       framework-arduinopico@https://github.com/taylor-an/arduino-pico.git#master
 
 Whereas the ``#master`` can also be replaced by a ``#branchname`` or a
 ``#commithash``. If left out, it will pull the default branch, which is ``master``.
