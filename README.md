@@ -1,6 +1,6 @@
 # Arduino-Pico
-[![Release](https://img.shields.io/github/v/release/earlephilhower/arduino-pico?style=plastic)](https://github.com/earlephilhower/arduino-pico/releases)
-[![Gitter](https://img.shields.io/gitter/room/earlephilhower/arduino-pico?style=plastic)](https://gitter.im/arduino-pico/community)
+[![Release](https://img.shields.io/github/v/release/taylor-an/arduino-pico?style=plastic)](https://github.com/taylor-an/arduino-pico/releases)
+[![Gitter](https://img.shields.io/gitter/room/taylor-an/arduino-pico?style=plastic)](https://gitter.im/arduino-pico/community)
 
 Raspberry Pi Pico Arduino core, for all RP2040 boards
 
@@ -46,7 +46,7 @@ Open up the Arduino IDE and go to File->Preferences.
 
 In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
 
-https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+https://github.com/taylor-an/arduino-pico/releases/download/global/package_rp2040_index.json
 
 ![image](https://user-images.githubusercontent.com/11875/111917251-3c57f400-8a3c-11eb-8120-810a8328ab3f.png)
 
@@ -62,7 +62,7 @@ Type "pico" in the search box and select "Add":
 To install via GIT (for latest and greatest versions):
 ````
 mkdir -p ~/Arduino/hardware/pico
-git clone https://github.com/earlephilhower/arduino-pico.git ~/Arduino/hardware/pico/rp2040
+git clone https://github.com/taylor-an/arduino-pico.git ~/Arduino/hardware/pico/rp2040
 cd ~/Arduino/hardware/pico/rp2040
 git submodule update --init
 cd pico-sdk
@@ -166,7 +166,7 @@ If you want to contribute or have bugfixes, drop me a note at <earlephilhower@ya
 * The [Arduino IDE and ArduinoCore-API](https://arduino.cc) are developed and maintained by the Arduino team. The IDE is licensed under GPL.
 * The [RP2040 GCC-based toolchain](https://github.com/earlephilhower/pico-quick-toolchain) is licensed under under the GPL.
 * The [Pico-SDK](https://github.com/raspberrypi/pico-sdk) and [Pico-Extras](https://github.com/raspberrypi/pico-extras) are by Raspberry Pi (Trading) Ltd and licensed under the BSD 3-Clause license.
-* [Arduino-Pico](https://github.com/earlephilhower/arduino-pico) core files are licensed under the LGPL.
+* [Arduino-Pico](https://github.com/taylor-an/arduino-pico) core files are licensed under the LGPL.
 * [LittleFS](https://github.com/ARMmbed/littlefs) library written by ARM Limited and released under the [BSD 3-clause license](https://github.com/ARMmbed/littlefs/blob/master/LICENSE.md).
 * [UF2CONV.PY](https://github.com/microsoft/uf2) is by Microsoft Corporation and licensed under the MIT license.
 * Some filesystem code taken from the [ESP8266 Arduino Core](https://github.com/esp8266/Arduino) and licensed under the LGPL.

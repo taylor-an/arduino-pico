@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o xtrace
 
-[ -z "${REMOTE_URL}" ] && REMOTE_URL=https://github.com/earlephilhower/arduino-pico/releases/download
+[ -z "${REMOTE_URL}" ] && REMOTE_URL=https://github.com/taylor-an/arduino-pico/releases/download
 
 if [ ! -z "${manualversion}" ]; then
 
@@ -81,7 +81,7 @@ rsync -a -L -K --exclude-from 'exclude.txt' $srcdir/ $outdir/
 rm exclude.txt
 
 # Get previous release name
-curl --silent https://api.github.com/repos/earlephilhower/arduino-pico/releases > releases.json
+curl --silent https://api.github.com/repos/taylor-an/arduino-pico/releases > releases.json
 # Previous final release (prerelase == false)
 prev_release=$(jq -r '. | map(select(.draft == false and .prerelease == false)) | sort_by(.created_at | - fromdateiso8601) | .[0].tag_name' releases.json)
 # Previous release (possibly a pre-release)
@@ -154,7 +154,7 @@ cat $srcdir/package/package_pico_index.template.json | \
 # Download previous release
 echo "Downloading base package: $base_ver"
 old_json=package_rp2040_index_stable.json
-curl -L -o $old_json "https://github.com/earlephilhower/arduino-pico/releases/download/${base_ver}/package_rp2040_index.json"
+curl -L -o $old_json "https://github.com/taylor-an/arduino-pico/releases/download/${base_ver}/package_rp2040_index.json"
 new_json=package_rp2040_index.json
 
 set +e

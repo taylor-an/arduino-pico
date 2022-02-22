@@ -49,7 +49,7 @@ You *also* need to inject two PlatformIO packages, one for the compiler toolchai
     framework = arduino
     ; note that download link for toolchain is specific for OS. see https://github.com/earlephilhower/pico-quick-toolchain/releases.
     platform_packages = 
-        maxgerhardt/framework-arduinopico@https://github.com/earlephilhower/arduino-pico.git
+        maxgerhardt/framework-arduinopico@https://github.com/taylor-an/arduino-pico.git
         maxgerhardt/toolchain-pico@https://github.com/earlephilhower/pico-quick-toolchain/releases/download/1.3.1-a/x86_64-w64-mingw32.arm-none-eabi-7855b0c.210706.zip
     
 When the support for this core has been merged into mainline PlatformIO, this notice will be removed and a standard `platformio.ini` as shown above will work as a base.
@@ -66,7 +66,7 @@ for which this is not the default core (e.g. the standard
 
 .. code:: ini
 
-    board_build.core = earlephilhower
+    board_build.core = taylor
 
 must be added to the ``platformio.ini``. This controls the `core
 switching
@@ -128,7 +128,7 @@ Debug Level
 -----------
 
 Done again by directly adding the needed `build
-flags <https://github.com/earlephilhower/arduino-pico/blob/05356da2c5552413a442f742e209c6fa92823666/boards.txt#L104-L114>`__.
+flags <https://github.com/taylor-an/arduino-pico/blob/05356da2c5552413a442f742e209c6fa92823666/boards.txt#L104-L114>`__.
 When wanting to define multiple build flags, they must be accumulated in
 either a sing line or a newline-separated expression.
 
@@ -183,7 +183,7 @@ directive to do so. Simply specify that the framework package
 .. code:: ini
 
     platform_packages =
-       framework-arduinopico@https://github.com/earlephilhower/arduino-pico.git#master
+       framework-arduinopico@https://github.com/taylor-an/arduino-pico.git#taylor-20220222
 
 Whereas the ``#master`` can also be replaced by a ``#branchname`` or a
 ``#commithash``. If left out, it will pull the default branch, which is ``master``.
@@ -206,11 +206,11 @@ and 0.5MByte filesystem.
     platform = https://github.com/maxgerhardt/platform-raspberrypi.git
     board = pico
     framework = arduino
-    board_build.core = earlephilhower
+    board_build.core = taylor
     board_build.filesystem_size = 0.5m
     ; note that download link for toolchain is specific for OS. see https://github.com/earlephilhower/pico-quick-toolchain/releases.
     platform_packages = 
-        maxgerhardt/framework-arduinopico@https://github.com/earlephilhower/arduino-pico.git
+        maxgerhardt/framework-arduinopico@https://github.com/taylor-an/arduino-pico.git
         maxgerhardt/toolchain-pico@https://github.com/earlephilhower/pico-quick-toolchain/releases/download/1.3.1-a/x86_64-w64-mingw32.arm-none-eabi-7855b0c.210706.zip
 
 

@@ -120,19 +120,19 @@ def configure_usb_flags(cpp_defines):
     # in any case, add standard flags
     # preferably use USB information from arduino.earlephilhower section,
     # but fallback to sensible values derived from other parts otherwise.
-    usb_pid = board.get("build.arduino.earlephilhower.usb_pid",
+    usb_pid = board.get("build.arduino.taylor.usb_pid",
                         board.get("build.hwids", [[0, 0]])[0][1])
-    usb_vid = board.get("build.arduino.earlephilhower.usb_vid",
+    usb_vid = board.get("build.arduino.taylor.usb_vid",
                         board.get("build.hwids", [[0, 0]])[0][0])
     usb_manufacturer = board.get(
-        "build.arduino.earlephilhower.usb_manufacturer", board.get("vendor", "Raspberry Pi"))
+        "build.arduino.taylor.usb_manufacturer", board.get("vendor", "Raspberry Pi"))
     usb_product = board.get(
-        "build.arduino.earlephilhower.usb_product", board.get("name", "Pico"))
+        "build.arduino.taylor.usb_product", board.get("name", "Pico"))
 
     # Copy logic from makeboards.py. 
     # Depending on whether a certain upload / debug method is used, change
     # the PID/VID.
-    # https://github.com/earlephilhower/arduino-pico/blob/master/tools/makeboards.py
+    # https://github.com/taylor-an/arduino-pico/blob/master/tools/makeboards.py
     vidtouse = usb_vid
     pidtouse = usb_pid
     if upload_protocol == "picoprobe": 
@@ -198,7 +198,7 @@ if not board.get("build.ldscript", ""):
 
 libs = []
 
-variant = board.get("build.arduino.earlephilhower.variant", board.get("build.variant", ""))
+variant = board.get("build.arduino.taylor.variant", board.get("build.variant", ""))
 
 if variant != "":
     env.Append(CPPPATH=[
@@ -216,7 +216,7 @@ libs.append(
         os.path.join(FRAMEWORK_DIR, "cores", "rp2040")))
 
 bootloader_src_file = board.get(
-    "build.arduino.earlephilhower.boot2_source", "boot2_generic_03h_2_padded_checksum.S")
+    "build.arduino.taylor.boot2_source", "boot2_generic_03h_2_padded_checksum.S")
 
 # Add bootloader file (boot2.o)
 # Only build the needed .S file, exclude all others via src_filter.

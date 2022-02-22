@@ -18,7 +18,7 @@ out the 2.0 beta Arduino please install the release 1.8 version beforehand
 to ensure needed device drivers are present.
 
 1. Open up the Arduino IDE and go to File->Preferences.
-2. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:  https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+2. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:  https://github.com/taylor-an/arduino-pico/releases/download/global/package_rp2040_index.json
 
    .. image:: images/install1.png
 
@@ -35,7 +35,7 @@ To install via GIT (for latest and greatest versions):
 .. code:: bash
 
         mkdir -p ~/Arduino/hardware/pico
-        git clone https://github.com/earlephilhower/arduino-pico.git ~/Arduino/hardware/pico/rp2040
+        git clone https://github.com/taylor-an/arduino-pico.git ~/Arduino/hardware/pico/rp2040
         cd ~/Arduino/hardware/pico/rp2040
         git submodule update --init
         cd pico-sdk
@@ -108,7 +108,7 @@ Uploading Filesystem Images
 ---------------------------
 The onboard flash filesystem for the Pico, LittleFS, lets you upload a filesystem image from the sketch directory for your sketch to use.  Download the needed plugin from
 
-* https://github.com/earlephilhower/arduino-pico-littlefs-plugin/releases
+* https://github.com/taylor-an/arduino-pico-littlefs-plugin/releases
 
 To install, follow the directions in 
 

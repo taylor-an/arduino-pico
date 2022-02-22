@@ -10,7 +10,7 @@ Pico / RP2040 based boards.
 This Arduino core uses a custom toolset with GCC 10.2 and Newlib 4.0.0
 and doesn't require any system-installed prerequisites.
 
-For the latest version, always check https://github.com/earlephilhower/arduino-pico
+For the latest version, always check https://github.com/taylor-an/arduino-pico
 
 .. toctree::
    :maxdepth: 2
